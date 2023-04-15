@@ -26,11 +26,15 @@
 <meta property="og:site_name" content="Damaris">
 <meta property="og:description" content="¶1 主流使用的编译器   Visual Studio : masm   Linux &#x2F; Mac : GCC  （online judge）   ¶2 C语言具有可移植性   可移植性：一个程序可以经过简单的编译后在不同的平台上运行。（如C&#x2F;C++，因为其语言标准里不包括系统硬件操作资源的接口，而Windows和Linux接口不一样） tips：考试中只使用标准C，不涉及硬件操作资源接口。   跨">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/04/10/images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415161457904.png">
+<meta property="og:image" content="http://example.com/2023/04/10/images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415162337627.png">
+<meta property="og:image" content="http://example.com/2023/04/10/images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415163039303.png">
 <meta property="article:published_time" content="2023-04-10T06:55:00.000Z">
-<meta property="article:modified_time" content="2023-04-13T13:37:14.027Z">
+<meta property="article:modified_time" content="2023-04-15T08:32:44.324Z">
 <meta property="article:author" content="Damaris">
 <meta property="article:tag" content="C语言">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/04/10/images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415161457904.png">
 
 
 <link rel="canonical" href="http://example.com/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/">
@@ -113,7 +117,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%B8%BB%E6%B5%81%E4%BD%BF%E7%94%A8%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">1 主流使用的编译器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-C%E8%AF%AD%E8%A8%80%E5%85%B7%E6%9C%89%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">2 C语言具有可移植性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%B7%AF%E5%BE%84%E5%8F%8A%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%8D%E8%A6%81%E5%87%BA%E7%8E%B0%E7%A9%BA%E6%A0%BC%E3%80%81%E4%B8%AD%E6%96%87"><span class="nav-number">3.</span> <span class="nav-text">3 路径及文件名不要出现空格、中文</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%BB%E6%B5%81%E4%BD%BF%E7%94%A8%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">1 主流使用的编译器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-C%E8%AF%AD%E8%A8%80%E5%85%B7%E6%9C%89%E5%8F%AF%E7%A7%BB%E6%A4%8D%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">2 C语言具有可移植性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%B7%AF%E5%BE%84%E5%8F%8A%E6%96%87%E4%BB%B6%E5%90%8D%E4%B8%8D%E8%A6%81%E5%87%BA%E7%8E%B0%E7%A9%BA%E6%A0%BC%E3%80%81%E4%B8%AD%E6%96%87"><span class="nav-number">3.</span> <span class="nav-text">3 路径及文件名不要出现空格、中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%BE%AE%E8%BD%AFC%E5%92%8CC-%E7%9A%84%E7%BC%96%E8%AF%91%E5%99%A8%E6%98%AF%E4%BA%8C%E5%90%88%E4%B8%80%E7%9A%84"><span class="nav-number">4.</span> <span class="nav-text">4 微软C和C++的编译器是二合一的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-VS2012%E4%B8%8E%E5%85%B6%E5%90%8E%E7%89%88%E6%9C%AC%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.</span> <span class="nav-text">5 VS2012与其后版本之间的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B"><span class="nav-number">6.</span> <span class="nav-text">6 程序的编译过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%96%AD%E7%82%B9%E5%8F%8A%E8%B0%83%E8%AF%95"><span class="nav-number">7.</span> <span class="nav-text">7 断点及调试</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -205,7 +209,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-13 21:37:14" itemprop="dateModified" datetime="2023-04-13T21:37:14+08:00">2023-04-13</time>
+      <time title="修改时间：2023-04-15 16:32:44" itemprop="dateModified" datetime="2023-04-15T16:32:44+08:00">2023-04-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -231,7 +235,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="1-主流使用的编译器"><a class="header-anchor" href="#1-主流使用的编译器">¶</a>1 主流使用的编译器</h2>
+        <h3 id="1-主流使用的编译器"><a class="header-anchor" href="#1-主流使用的编译器">¶</a>1 主流使用的编译器</h3>
 <ul>
 <li>
 <p>Visual Studio : masm</p>
@@ -240,7 +244,7 @@
 <p>Linux / Mac : GCC  （online judge）</p>
 </li>
 </ul>
-<h2 id="2-C语言具有可移植性"><a class="header-anchor" href="#2-C语言具有可移植性">¶</a>2 C语言具有<strong>可移植性</strong></h2>
+<h3 id="2-C语言具有可移植性"><a class="header-anchor" href="#2-C语言具有可移植性">¶</a>2 C语言具有<strong>可移植性</strong></h3>
 <ul>
 <li>
 <p><strong>可移植性</strong>：一个程序可以经过简单的编译后在不同的平台上运行。<sub>（如C/C++，因为其语言标准里不包括系统硬件操作资源的接口，而Windows和Linux接口不一样）</sub></p>
@@ -250,7 +254,7 @@
 <p><strong>跨平台性</strong>：一个程序不经过编译就可以在不同的平台上运行。<sub>（如Java、Python）</sub></p>
 </li>
 </ul>
-<h2 id="3-路径及文件名不要出现空格、中文"><a class="header-anchor" href="#3-路径及文件名不要出现空格、中文">¶</a>3 路径及文件名不要出现空格、中文</h2>
+<h3 id="3-路径及文件名不要出现空格、中文"><a class="header-anchor" href="#3-路径及文件名不要出现空格、中文">¶</a>3 路径及文件名不要出现空格、中文</h3>
 <ul>
 <li>因为有些做的不好的开发环境，没有对空格、中文做额外的处理。</li>
 <li>避免因为非程序本身的问题而导致运行错误。</li>
@@ -258,6 +262,30 @@
 <li><code>将解决方案和项目放在同一目录中</code>不要勾选，这样有助于初学者理解原理</li>
 <li>一个解决方案里可以有多个项目</li>
 </ul>
+<h3 id="4-微软C和C-的编译器是二合一的"><a class="header-anchor" href="#4-微软C和C-的编译器是二合一的">¶</a>4 微软C和C++的编译器是二合一的</h3>
+<ul>
+<li><code>.cpp</code>虽然向下兼容<code>.c</code>，但是要求更严格，对初学者来说，写成<code>.c</code>更好</li>
+</ul>
+<h3 id="5-VS2012与其后版本之间的区别"><a class="header-anchor" href="#5-VS2012与其后版本之间的区别">¶</a>5 VS2012与其后版本之间的区别</h3>
+<ul>
+<li><code>system(&quot;pause&quot;);</code>system函数使我们通过C语言调用执行了Windows的批处理命令pause，该函数在使用<code>#include&lt;stdlib.h&gt;</code> 调用。<br>
+​可以在cmd中输入<code>pause</code>体验一下。</li>
+</ul>
+<h3 id="6-程序的编译过程"><a class="header-anchor" href="#6-程序的编译过程">¶</a>6 程序的编译过程</h3>
+<p><img src="../images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415161457904.png" alt="image-20230415161457904"></p>
+<ul>
+<li>
+<p><code>.c</code>文件经过编译后生成<code>.obj</code>文件，但是这种文件不能执行，因为没有将动态库（调用的标准库函数如<code>printf()</code>函数、其他目标文件）链接。链接之后生成可执行的<code>.exe</code>文件。</p>
+</li>
+<li>
+<p>可以分析，“ 编译错误 ” or “ 链接错误 ”，这两种在业界都称作 “ 编译错误 ” 。</p>
+</li>
+</ul>
+<h3 id="7-断点及调试"><a class="header-anchor" href="#7-断点及调试">¶</a>7 断点及调试</h3>
+<p><img src="../images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415162337627.png" alt="image-20230415162337627"></p>
+<p>左键单击红点区域，即可生成一个断点。</p>
+<p><img src="../images/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415163039303.png" alt="image-20230415163039303"></p>
+<p>当程序运行后停在断点后，<code>内存1、调用堆栈、监视1</code>这些窗口才能在<code>调试（D）&gt;窗口（W）</code>中被调出来。</p>
 
     </div>
 
