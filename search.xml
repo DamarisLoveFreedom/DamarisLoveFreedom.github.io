@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>c语言督学营</title>
+    <url>/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/</url>
+    <content><![CDATA[<h1>Week -1</h1>
+<h2 id="Day-1"><a class="header-anchor" href="#Day-1">¶</a>Day-1</h2>
+<h3 id="1-主流使用的编译器"><a class="header-anchor" href="#1-主流使用的编译器">¶</a>1 主流使用的编译器</h3>
+<ul>
+<li>
+<p>Visual Studio : masm</p>
+</li>
+<li>
+<p>Linux / Mac : GCC  （online judge）</p>
+</li>
+</ul>
+<h3 id="2-C语言具有可移植性"><a class="header-anchor" href="#2-C语言具有可移植性">¶</a>2 C语言具有<strong>可移植性</strong></h3>
+<ul>
+<li>
+<p><strong>可移植性</strong>：一个程序可以经过简单的编译后在不同的平台上运行。<sub>（如C/C++，因为其语言标准里不包括系统硬件操作资源的接口，而Windows和Linux接口不一样）</sub></p>
+<p><sub>tips：考试中只使用标准C，不涉及硬件操作资源接口。</sub></p>
+</li>
+<li>
+<p><strong>跨平台性</strong>：一个程序不经过编译就可以在不同的平台上运行。<sub>（如Java、Python）</sub></p>
+</li>
+</ul>
+<h3 id="3-路径及文件名不要出现空格、中文"><a class="header-anchor" href="#3-路径及文件名不要出现空格、中文">¶</a>3 路径及文件名不要出现空格、中文</h3>
+<ul>
+<li>因为有些做的不好的开发环境，没有对空格、中文做额外的处理。</li>
+<li>避免因为非程序本身的问题而导致运行错误。</li>
+<li><code>解决方案名称</code>可以使用中文</li>
+<li><code>将解决方案和项目放在同一目录中</code>不要勾选，这样有助于初学者理解原理</li>
+<li>一个解决方案里可以有多个项目</li>
+</ul>
+<h3 id="4-微软C和C-的编译器是二合一的"><a class="header-anchor" href="#4-微软C和C-的编译器是二合一的">¶</a>4 微软C和C++的编译器是二合一的</h3>
+<ul>
+<li><code>.cpp</code>虽然向下兼容<code>.c</code>，但是要求更严格，对初学者来说，写成<code>.c</code>更好</li>
+</ul>
+<h3 id="5-VS2012与其后版本之间的区别"><a class="header-anchor" href="#5-VS2012与其后版本之间的区别">¶</a>5 VS2012与其后版本之间的区别</h3>
+<ul>
+<li><code>system(&quot;pause&quot;);</code>system函数使我们通过C语言调用执行了Windows的批处理命令pause，该函数在使用<code>#include&lt;stdlib.h&gt;</code> 调用。<br>
+​可以在cmd中输入<code>pause</code>体验一下。</li>
+</ul>
+<h3 id="6-程序的编译过程"><a class="header-anchor" href="#6-程序的编译过程">¶</a>6 程序的编译过程</h3>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415161457904.png" alt="image-20230415161457904"></p>
+<ul>
+<li>
+<p><code>.c</code>文件经过编译后生成<code>.obj</code>文件，但是这种文件不能执行，因为没有将动态库（调用的标准库函数如<code>printf()</code>函数、其他目标文件）链接。链接之后生成可执行的<code>.exe</code>文件。</p>
+</li>
+<li>
+<p>可以分析，“ 编译错误 ” or “ 链接错误 ”，这两种在业界都称作 “ 编译错误 ” 。</p>
+</li>
+</ul>
+<h3 id="7-断点及调试"><a class="header-anchor" href="#7-断点及调试">¶</a>7 断点及调试</h3>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415162337627.png" alt="image-20230415162337627"></p>
+<p>左键单击红点区域，即可生成一个断点。</p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415163039303.png" alt="image-20230415163039303"></p>
+<p>当程序运行后停在断点后，<code>内存1、调用堆栈、监视1</code>这些窗口才能在<code>调试（D）&gt;窗口（W）</code>中被调出来。</p>
+]]></content>
+      <categories>
+        <category>408</category>
+        <category>c语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo tips</title>
+    <url>/2023/04/10/hexo%20tips/</url>
+    <content><![CDATA[<h4 id="打开admin"><a class="header-anchor" href="#打开admin">¶</a>打开admin</h4>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server <span class="token parameter variable">-d</span>   <span class="token comment">#http://localhost:4000/admin</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="静态网页相关操作"><a class="header-anchor" href="#静态网页相关操作">¶</a>静态网页相关操作</h4>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo clean       <span class="token comment">#清除本地网页文件</span>
+$ hexo g           <span class="token comment">#监视变动，生成静态网页</span>
+$ hexo s           <span class="token comment">#本地访问网页 http://localhost:4000/</span>
+$ hexo d           <span class="token comment">#将网页自动推送到GitHub仓库</span>
+$ hexo g <span class="token parameter variable">-d</span>        <span class="token comment">#监视变动，并推送至仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="我执行的-config-yml相关操作"><a class="header-anchor" href="#我执行的-config-yml相关操作">¶</a>我执行的<code>_config.yml</code>相关操作</h3>
+<h4 id="hexo根目录下："><a class="header-anchor" href="#hexo根目录下：">¶</a>hexo根目录下：</h4>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">#语言选择</span>
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token comment">#主题选择</span>
+<span class="token key atrule">theme</span><span class="token punctuation">:</span> next
+<span class="token comment">#使用GitHub仓库托管</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> git@github.com<span class="token punctuation">:</span>Github用户名/GitHub用户名.github.io.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> main     <span class="token comment">#现在不是master了</span>
+<span class="token comment"># Markdown-it config</span>
+<span class="token key atrule">markdown</span><span class="token punctuation">:</span>
+  <span class="token key atrule">render</span><span class="token punctuation">:</span>
+    <span class="token key atrule">html</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">xhtmlOut</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+    <span class="token key atrule">breaks</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">linkify</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">typographer</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">quotes</span><span class="token punctuation">:</span> <span class="token string">'“”‘’'</span>
+  <span class="token key atrule">plugins</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>abbr
+    <span class="token punctuation">-</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>footnote
+    <span class="token punctuation">-</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>ins
+    <span class="token punctuation">-</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>sub
+    <span class="token punctuation">-</span> markdown<span class="token punctuation">-</span>it<span class="token punctuation">-</span>sup
+  <span class="token key atrule">anchors</span><span class="token punctuation">:</span>
+    <span class="token key atrule">level</span><span class="token punctuation">:</span> <span class="token number">2</span>
+    <span class="token key atrule">collisionSuffix</span><span class="token punctuation">:</span> <span class="token string">'v'</span>
+    <span class="token key atrule">permalink</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+    <span class="token key atrule">permalinkClass</span><span class="token punctuation">:</span> header<span class="token punctuation">-</span>anchor
+    <span class="token key atrule">permalinkSymbol</span><span class="token punctuation">:</span> ¶
+
+<span class="token comment">#hexo-prism-plugin </span>
+<span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>    <span class="token comment"># realtime/preprocess</span>
+  <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span>
+  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>    <span class="token comment"># default false</span>
+  <span class="token key atrule">custom_css</span><span class="token punctuation">:</span>
+  
+<span class="token comment">#hexo-generator-searchdb 搜索</span>
+<span class="token key atrule">search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
+  <span class="token key atrule">field</span><span class="token punctuation">:</span> post
+  <span class="token key atrule">content</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">format</span><span class="token punctuation">:</span> html
+  
+<span class="token comment">#hexo-word-counter  字数及阅读时长统计</span>
+<span class="token key atrule">symbols_count_time</span><span class="token punctuation">:</span>
+  <span class="token key atrule">symbols</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">time</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_symbols</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">total_time</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">exclude_codeblock</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+  <span class="token key atrule">awl</span><span class="token punctuation">:</span> <span class="token number">4</span>
+  <span class="token key atrule">wpm</span><span class="token punctuation">:</span> <span class="token number">275</span>
+  <span class="token key atrule">suffix</span><span class="token punctuation">:</span> <span class="token string">"mins."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="node-module-hexo-theme-next目录下的"><a class="header-anchor" href="#node-module-hexo-theme-next目录下的">¶</a>node_module/hexo-theme-next目录下的</h4>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">#主题风格选择</span>
+<span class="token key atrule">scheme</span><span class="token punctuation">:</span> Gemini
+<span class="token comment">#语言选择</span>
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token comment">#菜单设置</span>
+<span class="token key atrule">menu</span><span class="token punctuation">:</span>
+  <span class="token key atrule">home</span><span class="token punctuation">:</span> /    <span class="token comment">#主页</span>
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span> /tags       <span class="token comment">#标签</span>
+  <span class="token key atrule">categories</span><span class="token punctuation">:</span> /categories     <span class="token comment">#分类</span>
+  <span class="token key atrule">archives</span><span class="token punctuation">:</span> /archives     <span class="token comment">#归档</span>
+<span class="token comment">#社交账号</span>
+<span class="token key atrule">social</span><span class="token punctuation">:</span>
+  <span class="token key atrule">GitHub</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/DamarisLoveFreedom
+<span class="token comment">#启用本地搜索</span>
+<span class="token key atrule">local_search</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment">#字数及阅读时长统计</span>
+<span class="token key atrule">symbols_count_time</span><span class="token punctuation">:</span>
+  <span class="token key atrule">separated_meta</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">item_text_total</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span class="token comment">#从false改为了true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="使用的markdown渲染器：hexo-renderer-markdown-it"><a class="header-anchor" href="#使用的markdown渲染器：hexo-renderer-markdown-it">¶</a>使用的markdown渲染器：hexo-renderer-markdown-it</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> i hexo-renderer-markdown-it <span class="token parameter variable">--save</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="hexo插件"><a class="header-anchor" href="#hexo插件">¶</a>hexo插件</h3>
+<h4 id="安装插件"><a class="header-anchor" href="#安装插件">¶</a>安装插件</h4>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> <span class="token operator">&lt;</span>插件名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="卸载插件"><a class="header-anchor" href="#卸载插件">¶</a>卸载插件</h4>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ <span class="token function">npm</span> uninstall <span class="token operator">&lt;</span>插件名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>各种教程</p>
+<p><a href="https://hexo-next.readthedocs.io/zh_CN/latest/next/advanced/%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1/">NexT主题下字数阅读时长统计：hexo-word-counter</a></p>
+<p><a href="https://blog.csdn.net/nineya_com/article/details/103338696">本地搜索功能：hexo-generator-searchdb</a></p>
+<p><a href="https://github.com/ele828/hexo-prism-plugin">代码高亮：hexo-prism-plugin</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Deep Learning</title>
+    <url>/2023/04/10/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+</search>
