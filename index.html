@@ -227,7 +227,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-16 01:26:21" itemprop="dateModified" datetime="2023-04-16T01:26:21+08:00">2023-04-16</time>
+      <time title="修改时间：2023-04-16 19:55:37" itemprop="dateModified" datetime="2023-04-16T19:55:37+08:00">2023-04-16</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -463,7 +463,7 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-04-16 01:27:31" itemprop="dateModified" datetime="2023-04-16T01:27:31+08:00">2023-04-16</time>
+      <time title="修改时间：2023-04-20 21:44:07" itemprop="dateModified" datetime="2023-04-20T21:44:07+08:00">2023-04-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -486,14 +486,14 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>517</span>
+      <span>849</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -512,7 +512,7 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
 <p>Visual Studio : masm</p>
 </li>
 <li>
-<p>Linux / Mac : GCC  （online judge）</p>
+<p>Linux / Mac : GCC  （王道的online judge运行在Linux服务器上）</p>
 </li>
 </ul>
 <h3 id="C语言具有可移植性"><a class="header-anchor" href="#C语言具有可移植性">¶</a>C语言具有<strong>可移植性</strong></h3>
@@ -557,6 +557,60 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
 <p>左键单击红点区域，即可生成一个断点。</p>
 <p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415163039303.png" alt="image-20230415163039303"></p>
 <p>当程序运行后停在断点后，<code>内存1、调用堆栈、监视1</code>这些窗口才能在<code>调试（D）&gt;窗口（W）</code>中被调出来。</p>
+<h2 id="DAY-2"><a class="header-anchor" href="#DAY-2">¶</a>DAY 2</h2>
+<h3 id="Windows系统的也可以学一下VScode，可能以后在公司要使用"><a class="header-anchor" href="#Windows系统的也可以学一下VScode，可能以后在公司要使用">¶</a>Windows系统的也可以学一下VScode，可能以后在公司要使用</h3>
+<p>VScode是免费的跨平台软件，有些公司（如腾讯）为了省钱，在开发C/C++时用的是VScode。</p>
+<h3 id="数据类型、运算符与表达式"><a class="header-anchor" href="#数据类型、运算符与表达式">¶</a>数据类型、运算符与表达式</h3>
+<h4 id="数据类型分类"><a class="header-anchor" href="#数据类型分类">¶</a>数据类型分类</h4>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420205821722.png" alt="image-20230420205821722"></p>
+<ul>
+<li>联合类型union、枚举类型enum，初试不考</li>
+<li>构造类型中放入基本类型</li>
+<li>指针很重要</li>
+</ul>
+<h4 id="常量"><a class="header-anchor" href="#常量">¶</a>常量</h4>
+<ul>
+<li>编译时，整型、实型、字符型常量，直接在代码段CS（code segment）</li>
+<li>整型：1、-1</li>
+<li>实型：0.1、-3.1</li>
+<li>字符型：‘a’</li>
+<li>字符串型：“abc”</li>
+<li>定义方式：<code>#define PI 3.14</code>   （不能对符号常量赋值）</li>
+</ul>
+<h4 id="变量"><a class="header-anchor" href="#变量">¶</a>变量</h4>
+<ul>
+<li><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420211940802.png" alt="image-20230420211940802"></li>
+<li>==如何使用<code>监视</code>+<code>内存</code>功能调试，示例：==</li>
+</ul>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span> 
+	a <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在<code>监视1</code>中添加要看的变量，得到内存地址，拖动<code>值</code>到<code>内存1</code>中</p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213122788.png" alt="image-20230420213122788"></p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213256147.png" alt="image-20230420213256147"></p>
+<p>在<img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213635245.png" alt="image-20230420213635245"><code>逐过程</code>调试中，可以观察到该地址内的值的变化</p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213942200.png" alt="image-20230420213942200"></p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420214008941.png" alt="image-20230420214008941"></p>
+<h5 id="变量命名要求"><a class="header-anchor" href="#变量命名要求">¶</a>变量命名要求</h5>
+<ul>
+<li>
+<p>不能与关键字重名（技巧：关键字里没有下划线）<img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420210032841.png" alt="image-20230420210032841"></p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420211903554.png" alt="image-20230420211903554"></p>
+</li>
+<li>
+<p><strong>字母</strong>、数字、<strong>下划线</strong>  （不能数字开头）   &gt;&gt;     C、Java等编译性语言，使用这样的命名规则是为了<u>快速编译</u></p>
+</li>
+<li>
+<p><strong>区分大小写</strong></p>
+</li>
+<li>
+<p>见名知意</p>
+</li>
+</ul>
 
       
     </div>
@@ -597,14 +651,14 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">4 分钟</span>
+    <span title="站点阅读时长">6 分钟</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
