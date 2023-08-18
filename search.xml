@@ -228,7 +228,7 @@ $ hexo server <span class="token parameter variable">-d</span>   <span class="to
 
 <span class="token comment">#hexo-prism-plugin </span>
 <span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span>
-  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>    <span class="token comment"># realtime/preprocess</span>
+  <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>   <span class="token comment"># realtime/preprocess</span>
   <span class="token key atrule">theme</span><span class="token punctuation">:</span> <span class="token string">'tomorrow'</span>
   <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>    <span class="token comment"># default false</span>
   <span class="token key atrule">custom_css</span><span class="token punctuation">:</span>
