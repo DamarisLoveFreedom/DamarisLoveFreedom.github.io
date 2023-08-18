@@ -241,6 +241,8 @@ $ hexo server <span class="token parameter variable">-d</span>   <span class="to
     <span class="token key atrule">permalinkClass</span><span class="token punctuation">:</span> header<span class="token punctuation">-</span>anchor
     <span class="token key atrule">permalinkSymbol</span><span class="token punctuation">:</span> ¶
 
+<span class="token key atrule">highlight</span><span class="token punctuation">:</span>
+  enable<span class="token punctuation">:</span>fa
 <span class="token comment">#hexo-prism-plugin </span>
 <span class="token key atrule">prism_plugin</span><span class="token punctuation">:</span>
   <span class="token key atrule">mode</span><span class="token punctuation">:</span> <span class="token string">'preprocess'</span>   <span class="token comment"># realtime/preprocess</span>
@@ -264,7 +266,7 @@ $ hexo server <span class="token parameter variable">-d</span>   <span class="to
   <span class="token key atrule">exclude_codeblock</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
   <span class="token key atrule">awl</span><span class="token punctuation">:</span> <span class="token number">4</span>
   <span class="token key atrule">wpm</span><span class="token punctuation">:</span> <span class="token number">275</span>
-  <span class="token key atrule">suffix</span><span class="token punctuation">:</span> <span class="token string">"mins."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token key atrule">suffix</span><span class="token punctuation">:</span> <span class="token string">"mins."</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="node-module-hexo-theme-next目录下的"><a class="header-anchor" href="#node-module-hexo-theme-next目录下的">¶</a>node_module/hexo-theme-next目录下的</h4>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment">#主题风格选择</span>
 <span class="token key atrule">scheme</span><span class="token punctuation">:</span> Gemini
