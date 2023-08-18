@@ -56,25 +56,58 @@
 <p>左键单击红点区域，即可生成一个断点。</p>
 <p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230415163039303.png" alt="image-20230415163039303"></p>
 <p>当程序运行后停在断点后，<code>内存1、调用堆栈、监视1</code>这些窗口才能在<code>调试（D）&gt;窗口（W）</code>中被调出来。</p>
+<h3 id="启动项目"><a class="header-anchor" href="#启动项目">¶</a>启动项目</h3>
+<p>项目名加粗的为启动项目。运行的是启动项目，而非鼠标点在的页面。</p>
+<h3 id="oj使用"><a class="header-anchor" href="#oj使用">¶</a>oj使用</h3>
+<h4 id="输出"><a class="header-anchor" href="#输出">¶</a>输出</h4>
+<p>所有的oj系统，都严格执行样例的标准。如下</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c">题目要求：
+Sample input<span class="token operator">:</span><span class="token number">1</span> <span class="token number">4</span>
+Sample output<span class="token operator">:</span><span class="token number">5</span>
+    
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">;</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+#以上代码是对的，即AC。
+
+#以下是错误的。
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;stdio.h></span></span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">&#123;</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"请输入a、b：\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">scanf</span><span class="token punctuation">(</span><span class="token string">"%d%d"</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>a<span class="token punctuation">,</span><span class="token operator">&amp;</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="DAY-2"><a class="header-anchor" href="#DAY-2">¶</a>DAY 2</h2>
 <h3 id="Windows系统的也可以学一下VScode，可能以后在公司要使用"><a class="header-anchor" href="#Windows系统的也可以学一下VScode，可能以后在公司要使用">¶</a>Windows系统的也可以学一下VScode，可能以后在公司要使用</h3>
 <p>VScode是免费的跨平台软件，有些公司（如腾讯）为了省钱，在开发C/C++时用的是VScode。</p>
 <h3 id="数据类型、运算符与表达式"><a class="header-anchor" href="#数据类型、运算符与表达式">¶</a>数据类型、运算符与表达式</h3>
 <h4 id="数据类型分类"><a class="header-anchor" href="#数据类型分类">¶</a>数据类型分类</h4>
-<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420205821722.png" alt="image-20230420205821722"></p>
+<img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420205821722.png" alt="image-20230420205821722" style="zoom:80%;">
 <ul>
 <li>联合类型union、枚举类型enum，初试不考</li>
 <li>构造类型中放入基本类型</li>
 <li>指针很重要</li>
 </ul>
+<h4 id="进制转换"><a class="header-anchor" href="#进制转换">¶</a>进制转换</h4>
 <h4 id="常量"><a class="header-anchor" href="#常量">¶</a>常量</h4>
+<p>整型：1、-1</p>
+<p>实型：0.1、-3.1</p>
+<p>字符型：‘a’</p>
+<p>字符串型：“abc”</p>
+<p>符号常量：  定义方式  <code>#define PI 3.14</code>   （不能对符号常量赋值）</p>
 <ul>
+<li>符号常量在预处理时会被替换为定义的值</li>
 <li>编译时，整型、实型、字符型常量，直接在代码段CS（code segment）</li>
-<li>整型：1、-1</li>
-<li>实型：0.1、-3.1</li>
-<li>字符型：‘a’</li>
-<li>字符串型：“abc”</li>
-<li>定义方式：<code>#define PI 3.14</code>   （不能对符号常量赋值）</li>
 </ul>
 <h4 id="变量"><a class="header-anchor" href="#变量">¶</a>变量</h4>
 <ul>
@@ -93,7 +126,8 @@
 <p>在<code>监视1</code>中添加要看的变量，得到内存地址，拖动<code>值</code>到<code>内存1</code>中</p>
 <p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213122788.png" alt="image-20230420213122788"></p>
 <img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213256147.png" alt="image-20230420213256147" style="zoom:67%;">
-<p>在<img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213635245.png" alt="image-20230420213635245" style="zoom:50%;"><code>逐过程</code>调试中，可以观察到该地址内的值的变化</p>
+<p>在使用<code>逐过程</code>调试中，</p>
+<p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213635245.png" alt="image-20230420213635245" style="zoom: 150%;">可以观察到该地址内的值的变化</p>
 <p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420213942200.png" alt="image-20230420213942200"></p>
 <p><img src="/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/image-20230420214008941.png" alt="image-20230420214008941"></p>
 <p>运行错误的时候，若单击<code>是</code>，则运行的是上一次的代码。</p>
@@ -125,6 +159,21 @@
 <p>见名知意</p>
 </li>
 </ul>
+<h4 id="scanf函数"><a class="header-anchor" href="#scanf函数">¶</a>scanf函数</h4>
+<ul>
+<li>C++     使用cin/cout关键字进行输入输出</li>
+</ul>
+<p>​       C语言  使用标准库函数实现，scanf/printf</p>
+<ul>
+<li>
+<p>微软认为<code>scanf</code>函数是不安全的，会出现报错并建议使用<code>scanf_s</code>。</p>
+<p>这样的说法没错，但是<code>scanf_s</code>不在标准库里，复试机试的时候<code>scanf_s</code>是使用不了的，例如浙大机试使用的是Linux系统，是GCC编译器。因此十分不建议使用<code>scanf_s</code></p>
+</li>
+</ul>
+<p>​	   解决方案：每次在代码最前面加入下述代码，可以使scanf函数的使用不报错。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span>  <span class="token macro-name">_CRT_SECURE_NO_WARNINGS</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>​	   oj上，上述代码可用可不用。</p>
+<p>​	   考试不写。</p>
 ]]></content>
       <categories>
         <category>408</category>
@@ -280,6 +329,21 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows操作小记</title>
+    <url>/2023/08/18/Windows%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Win+R      <span class="token comment">#打开运行窗</span>
+appwiz.cpl     <span class="token comment">#打开“程序和功能”窗口</span>
+%localappdata%   <span class="token comment">#打开local/appdata</span>
+%appdata%     <span class="token comment">#打开roaming</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
