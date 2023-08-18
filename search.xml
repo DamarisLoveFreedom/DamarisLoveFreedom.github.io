@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Windows操作小记</title>
+    <url>/2023/08/18/Windows%E6%93%8D%E4%BD%9C/</url>
+    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Win+R      <span class="token comment">#打开运行窗</span>
+appwiz.cpl     <span class="token comment">#打开“程序和功能”窗口</span>
+%localappdata%   <span class="token comment">#打开local/appdata</span>
+%appdata%     <span class="token comment">#打开roaming</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>c语言督学营</title>
     <url>/2023/04/10/c%E8%AF%AD%E8%A8%80%E7%9D%A3%E5%AD%A6%E8%90%A5/</url>
     <content><![CDATA[<h1>Week -1</h1>
@@ -329,21 +344,6 @@ $ <span class="token function">npm</span> i hexo-renderer-markdown-it <span clas
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows操作小记</title>
-    <url>/2023/08/18/Windows%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Win+R      <span class="token comment">#打开运行窗</span>
-appwiz.cpl     <span class="token comment">#打开“程序和功能”窗口</span>
-%localappdata%   <span class="token comment">#打开local/appdata</span>
-%appdata%     <span class="token comment">#打开roaming</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-]]></content>
-      <categories>
-        <category>Windows</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
